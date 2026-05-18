@@ -5,12 +5,15 @@
 :root {
     --app-bg: #F0EFFF;
     --app-text: #000000;
+    --auth-bg: #FFFFFF;
 }
 
 .dark {
     --app-bg: #0D0D14;
     --app-text: #FFFFFF;
+    --auth-bg: #13131E;
 }
 
 .app-bg { background-color: var(--app-bg); }
-.app-text { color: var(--app-text)}
+.app-text { color: var(--app-text); }
+.auth-bg { background-color: var(--auth-bg); }
