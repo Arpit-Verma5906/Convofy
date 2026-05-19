@@ -6,14 +6,27 @@
     --app-bg: #F0EFFF;
     --app-text: #000000;
     --auth-bg: #FFFFFF;
+    --input-label: #4A5565;
+    --input-value: #99A1AF;
+    --input-bg: #F9FAFB;
+    --input-border: #E5E7EB;
 }
 
 .dark {
     --app-bg: #0D0D14;
     --app-text: #FFFFFF;
     --auth-bg: #13131E;
+    --input-label: #99A1AF;
+    --input-value: #4A5565;
+    --input-bg: #2a2a34;
+    --input-border: #35353e;
 }
 
 .app-bg { background-color: var(--app-bg); }
 .app-text { color: var(--app-text); }
 .auth-bg { background-color: var(--auth-bg); }
+.input-label { color: var(--input-label); }
+.input-value { color: var(--input-value); }
+.input-bg { background-color: var(--input-bg); }
+.input-border { border: 1.5px solid var(--input-border);}
+.input-border:focus-within { border: 1.5px solid #7F22FE;}
