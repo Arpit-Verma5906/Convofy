@@ -3,6 +3,8 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
+    width: 100%;
+    min-height: 100vh;
     --app-bg: #F0EFFF;
     --app-text: #000000;
     --auth-bg: #FFFFFF;
@@ -10,6 +12,10 @@
     --input-value: #99A1AF;
     --input-bg: #F9FAFB;
     --input-border: #E5E7EB;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 .dark {
@@ -28,5 +34,5 @@
 .input-label { color: var(--input-label); }
 .input-value { color: var(--input-value); }
 .input-bg { background-color: var(--input-bg); }
-.input-border { border: 1.5px solid var(--input-border);}
-.input-border:focus-within { border: 1.5px solid #7F22FE;}
+.input-border { border: 1.5px solid var(--input-border); }
+.input-border:focus-within { border: 1.5px solid #7F22FE; }

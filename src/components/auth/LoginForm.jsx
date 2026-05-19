@@ -19,39 +19,37 @@ function LoginForm() {
     }
 
     return (
-        <div className="flex flex-col gap-6">
-            <form
-                onSubmit={handleSubmit}
-                className="flex flex-col gap-4"
-            >
-                <Input
-                    label="Email"
-                    Icon={EmailIcon}
-                    type="email"
-                    placeholder="you@example.com"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required="required"
-                />
-                <Input
-                    label="Password"
-                    Icon={LockIcon}
-                    type="password"
-                    placeholder="••••••••"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required="required"
-                />
+        <form
+            onSubmit={handleSubmit}
+            className="flex flex-col gap-4"
+        >
+            <Input
+                label="Email"
+                Icon={EmailIcon}
+                type="email"
+                placeholder="you@example.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required="required"
+            />
+            <Input
+                label="Password"
+                Icon={LockIcon}
+                type="password"
+                placeholder="••••••••"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required="required"
+            />
 
-                <div className="text-[14px] font-medium leading-5 text-[#A684FF] self-end">
-                    Forgot password?
-                </div>
+            <div className="text-[14px] font-medium leading-5 text-[#A684FF] self-end">
+                Forgot password?
+            </div>
 
-                <Button
-                    label="Sign  in ->"
-                />
-            </form>
-        </div>
+            <Button
+                label="Sign  in ->"
+            />
+        </form>
     )
 }
 
