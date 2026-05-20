@@ -17,33 +17,37 @@ function AuthCard() {
           mode={mode}
           setMode={setMode}
         />
+        <div
+          key={mode}
+          className={`flex flex-col justify-between gap-8 ${mode === "login" ? "animate-fade-left" : "animate-fade-right"}`}
+        >
+          {mode === "login" ?
+            <LoginForm /> : <RegistrationForm />
+          }
 
-        {mode === "login" ?
-          <LoginForm /> : <RegistrationForm />
-        }
+          <div className="flex items-center gap-2">
+            <div className="flex-1 h-[0.25px] bg-[#E5E7EB] dark:bg-white/10 line"></div>
+            <span className="line-text leading-4 text-[12px] input-value">or continue with</span>
+            <div className="flex-1 line bg-[#E5E7EB] dark:bg-white/10 h-[0.25px]"></div>
+          </div>
 
-        <div className="flex items-center gap-2">
-          <div className="flex-1 h-[0.25px] bg-[#E5E7EB] dark:bg-white/10 line"></div>
-          <span className="line-text leading-4 text-[12px] input-value">or continue with</span>
-          <div className="flex-1 line bg-[#E5E7EB] dark:bg-white/10 h-[0.25px]"></div>
-        </div>
+          <div className="flex flex-row gap-3">
+            <SocialAuthButton
+              Icon={GoogleIcon}
+              label="Google"
+            />
+            <SocialAuthButton
+              Icon={PasskeyIcon}
+              label="Passkey"
+            />
+          </div>
 
-        <div className="flex flex-row gap-3">
-          <SocialAuthButton
-            Icon = {GoogleIcon}
-            label="Google"
-          />
-          <SocialAuthButton
-            Icon = {PasskeyIcon}
-            label="Passkey"
-          />
-        </div>
-
-        <div className="text-[12px] leading-4 input-value">
-          By contuining, you agree to our
-          <span className="text-[14px] text-[#A684FF]">{" "} Terms {" "}</span>
-          and
-          <span className="text-[14px] text-[#A684FF]">{" "}Privacy Policy</span>
+          <div className="text-[12px] leading-4 input-value">
+            By contuining, you agree to our
+            <span className="text-[14px] text-[#A684FF]">{" "} Terms {" "}</span>
+            and
+            <span className="text-[14px] text-[#A684FF]">{" "}Privacy Policy</span>
+          </div>
         </div>
       </div>
     </div>
