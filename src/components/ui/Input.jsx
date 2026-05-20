@@ -1,6 +1,6 @@
 import { useState } from "react"
-import EyeIcon from "./assets/eyeIcon.svg?react"
-import EyeOffIcon from "./assets/eyeOffIcon.svg?react"
+import EyeIcon from "../../assets/eyeIcon.svg?react"
+import EyeOffIcon from "../../assets/eyeOffIcon.svg?react"
 
 function Input({ label, Icon, type = "text", placeholder, value, onChange, required }) {
 
@@ -23,10 +23,10 @@ function Input({ label, Icon, type = "text", placeholder, value, onChange, requi
           className="flex-1 min-w-0 pb-px outline-none bg-transparent"
         />
         {type === "password" && (
-          showPassword ? <EyeIcon
+          showPassword ? <EyeOffIcon
             className="cursor-pointer w-4 input-value"
             onClick={() => { setShowPassword(!showPassword) }}
-          /> : <EyeOffIcon
+          /> : <EyeIcon
             className="cursor-pointer w-4 input-value"
             onClick={() => { setShowPassword(!showPassword) }}
           />

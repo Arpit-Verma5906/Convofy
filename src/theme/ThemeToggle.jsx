@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 import React from 'react'
 
-function Theme() {
+function ThemeToggle() {
 
     const [ theme, setTheme ] = useState(() => {
         const saved = localStorage.getItem("theme");
@@ -28,4 +28,4 @@ function Theme() {
     )
 }
 
-export default Theme
+export default ThemeToggle

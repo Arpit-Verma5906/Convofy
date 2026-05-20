@@ -5,6 +5,7 @@ import RegistrationForm from "./RegistrationForm";
 import SocialAuthButton from "./SocialAuthButton";
 import PasskeyIcon from "../../assets/passkey.svg?react"
 import GoogleIcon from "../../assets/google.svg?react"
+import TermsText from "./TermsText";
 
 function AuthCard() {
 
@@ -42,12 +43,7 @@ function AuthCard() {
             />
           </div>
 
-          <div className="text-[12px] leading-4 input-value">
-            By contuining, you agree to our
-            <span className="text-[14px] text-[#A684FF]">{" "} Terms {" "}</span>
-            and
-            <span className="text-[14px] text-[#A684FF]">{" "}Privacy Policy</span>
-          </div>
+          <TermsText />
         </div>
       </div>
     </div>

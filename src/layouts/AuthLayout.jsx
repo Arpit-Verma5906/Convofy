@@ -1,5 +1,5 @@
-import AuthCard from "./components/auth/AuthCard"
-import HeroSection from "./components/branding/HeroSection"
+import AuthCard from "../components/auth/AuthCard"
+import HeroSection from "../components/branding/HeroSection"
 
 function AuthLayout() {
     return (

@@ -1,4 +1,4 @@
-import AuthLayout from "./AuthLayout"
+import AuthLayout from "../layouts/AuthLayout"
 
 function App() {
 
