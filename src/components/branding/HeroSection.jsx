@@ -1,10 +1,11 @@
 import FeatureBadges from "./FeatureBadges"
+import HeroImg from "../../assets/convofy.svg?react"
 
 function HeroSection() {
   return (
     <div className="flex flex-col justify-center items-center lg:min-h-screen min-h-120 lg:w-[66%]">
       <div>
-        <img src="src/assets/convofy.svg" className="w-16 mb-8" />
+        <HeroImg  className="w-16 mb-8" />
       </div>
       <div className="font-bold text-5xl leading-12 mb-4 text-[#101828] dark:text-[#FFFFFF]">
         Convofy
