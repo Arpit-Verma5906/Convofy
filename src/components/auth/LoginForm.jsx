@@ -35,6 +35,8 @@ function LoginForm() {
                 value={signinEmail}
                 onChange={(e) => setSigninEmail(e.target.value)}
                 required="required"
+                autoComplete="email"
+                name="email"
             />
             <Input
                 label="Password"
@@ -44,6 +46,8 @@ function LoginForm() {
                 value={signinPassword}
                 onChange={(e) => setSigninPassword(e.target.value)}
                 required="required"
+                autoComplete="current-password"
+                name="password"
             />
 
             <div className="text-[14px] font-medium leading-5 text-[#A684FF] self-end">

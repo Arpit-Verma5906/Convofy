@@ -43,6 +43,8 @@ function RegistrationForm() {
         value={signupDisplayName}
         onChange={(e) => setSignupDisplayName(e.target.value)}
         required="required"
+        autoComplete="name"
+        name="displayName"
       />
       <Input
         label="Username"
@@ -52,6 +54,8 @@ function RegistrationForm() {
         value={signupUsername}
         onChange={(e) => setSignupUsername(e.target.value)}
         required="required"
+        autoComplete="username"
+        nname="username"
       />
       <Input
         label="Email"
@@ -61,6 +65,8 @@ function RegistrationForm() {
         value={signupEmail}
         onChange={(e) => setSignupEmail(e.target.value)}
         required="required"
+        autoComplete="email"
+        name="email"
       />
       <Input
         label="Password"
@@ -70,6 +76,8 @@ function RegistrationForm() {
         value={signupPassword}
         onChange={(e) => setSignupPassword(e.target.value)}
         required="required"
+        autoComplete="new-password"
+        name="new-password"
       />
 
       <Button

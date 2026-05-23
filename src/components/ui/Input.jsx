@@ -2,7 +2,7 @@ import { useState } from "react"
 import EyeIcon from "../../assets/eyeIcon.svg?react"
 import EyeOffIcon from "../../assets/eyeOffIcon.svg?react"
 
-function Input({ label, Icon, type = "text", placeholder, value, onChange, required }) {
+function Input({ label, Icon, type = "text", placeholder, value, onChange, required, autoComplete, name }) {
 
   const [showPassword, setShowPassword] = useState(false)
   const inputType = type === "password" ? showPassword ? "text" : "password" : type
@@ -20,6 +20,8 @@ function Input({ label, Icon, type = "text", placeholder, value, onChange, requi
           value={value}
           onChange={onChange}
           required={required}
+          autoComplete={autoComplete}
+          name={name}
           className="flex-1 min-w-0 pb-px outline-none bg-transparent"
         />
         {type === "password" && (
