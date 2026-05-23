@@ -1,16 +1,76 @@
-# React + Vite
+# Convofy
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Convofy is a modern, real-time messenger application. Currently under development, the goal of this application is to provide a seamless, secure, and intuitive chatting experience with real-time text capabilities.
 
-Currently, two official plugins are available:
+## Project Structure
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This project is organized as a unified workspace containing both the server-side backend and client-side frontend.
 
-## React Compiler
+- `/Frontend`: A React application built with Vite, focusing on a responsive UI with custom theming and animations.
+- `/Backend`: A Node.js API written in TypeScript, intended to serve REST endpoints and handle real-time WebSocket connections.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Technologies
 
-## Expanding the ESLint configuration
+### Frontend
+- **React**: Component-based UI formulation.
+- **Vite**: Fast, modern frontend build tool.
+- **Vanilla CSS**: Custom CSS (`animations.css`, `global.css`, `theme.css`) for UI styling and light/dark modes.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Backend
+- **Node.js**: JavaScript runtime environment.
+- **TypeScript**: Statically typed approach for robust backend execution.
+
+## Getting Started
+
+### Prerequisites
+Make sure you have [Bun](https://bun.sh/) installed.
+
+### Installation
+
+1. Clone the repository and navigate into the main directory:
+   ```bash
+   git clone <repository-url>
+   cd Convofy
+   ```
+
+2. Install Frontend dependencies:
+   ```bash
+   cd Frontend
+   bun install
+   ```
+
+3. Install Backend dependencies:
+   ```bash
+   cd ../Backend
+   bun install
+   ```
+
+### Running the App
+
+Run both the frontend and backend servers to get the full application working.
+
+#### Start the Backend
+```bash
+cd Backend
+bun run dev
+# Replace with the appropriate start script in Backend/package.json
+```
+
+#### Start the Frontend
+```bash
+cd Frontend
+bun run dev
+```
+The client app should now be running at `http://localhost:5173`.
+
+## Roadmap
+
+- [x] Initial Project Scaffolding
+- [x] Base UI Components & Authentication layouts
+- [ ] Authentication API Integration (Login / Registration)
+- [ ] Real-time Messaging via WebSockets (e.g., Socket.io)
+- [ ] Group Chats & Direct Messages
+- [ ] User profiles and online status indicators
+
+## License
+MIT
