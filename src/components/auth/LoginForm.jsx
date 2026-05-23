@@ -1,21 +1,25 @@
-import { useState } from "react"
 import Input from "../ui/Input";
 import Button from "../ui/Button";
 import EmailIcon from "../../assets/email.svg?react"
 import LockIcon from "../../assets/lock.svg?react"
+import { useOutletContext } from "react-router-dom";
 
 function LoginForm() {
 
-    const [email, setEmail] = useState("")
-    const [password, setPassword] = useState("")
+    const {
+        signinEmail,
+        setSigninEmail,
+        signinPassword,
+        setSigninPassword,
+    } = useOutletContext()
 
     function handleSubmit(e) {
         e.preventDefault();
 
-        console.log({ email, password })
+        console.log({ signinEmail, signinPassword })
 
-        setEmail("")
-        setPassword("")
+        setSigninEmail("")
+        setSigninPassword("")
     }
 
     return (
@@ -28,8 +32,8 @@ function LoginForm() {
                 Icon={EmailIcon}
                 type="email"
                 placeholder="you@example.com"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                value={signinEmail}
+                onChange={(e) => setSigninEmail(e.target.value)}
                 required="required"
             />
             <Input
@@ -37,8 +41,8 @@ function LoginForm() {
                 Icon={LockIcon}
                 type="password"
                 placeholder="••••••••"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                value={signinPassword}
+                onChange={(e) => setSigninPassword(e.target.value)}
                 required="required"
             />
 

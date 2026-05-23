@@ -1,27 +1,33 @@
 import Button from "../ui/Button"
 import Input from "../ui/Input"
-import { useState } from 'react'
 import EmailIcon from "../../assets/email.svg?react"
 import LockIcon from "../../assets/lock.svg?react"
 import HumanIcon from "../../assets/human.svg?react"
 import AtSignIcon from "../../assets/atSign.svg?react"
+import { useOutletContext } from "react-router-dom"
 
 function RegistrationForm() {
 
-  const [displayName, setDisplayName] = useState("")
-  const [username, setUsername] = useState("")
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
+  const {
+    signupDisplayName,
+    setSignupDisplayName,
+    signupUsername,
+    setSignupUsername,
+    signupEmail,
+    setSignupEmail,
+    signupPassword,
+    setSignupPassword,
+  } = useOutletContext()
 
   function handleSubmit(e) {
     e.preventDefault();
 
-    console.log({ displayName, username, email, password })
+    console.log({ signupDisplayName, signupUsername, signupEmail, signupPassword })
 
-    setDisplayName("")
-    setUsername("")
-    setEmail("")
-    setPassword("")
+    setSignupDisplayName("")
+    setSignupUsername("")
+    setSignupEmail("")
+    setSignupPassword("")
   }
 
   return (
@@ -34,8 +40,8 @@ function RegistrationForm() {
         Icon={HumanIcon}
         type="text"
         placeholder="Arpit Verma"
-        value={displayName}
-        onChange={(e) => setDisplayName(e.target.value)}
+        value={signupDisplayName}
+        onChange={(e) => setSignupDisplayName(e.target.value)}
         required="required"
       />
       <Input
@@ -43,8 +49,8 @@ function RegistrationForm() {
         Icon={AtSignIcon}
         type="text"
         placeholder="arpitverma"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
+        value={signupUsername}
+        onChange={(e) => setSignupUsername(e.target.value)}
         required="required"
       />
       <Input
@@ -52,8 +58,8 @@ function RegistrationForm() {
         Icon={EmailIcon}
         type="email"
         placeholder="you@example.com"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
+        value={signupEmail}
+        onChange={(e) => setSignupEmail(e.target.value)}
         required="required"
       />
       <Input
@@ -61,8 +67,8 @@ function RegistrationForm() {
         Icon={LockIcon}
         type="password"
         placeholder="••••••••"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
+        value={signupPassword}
+        onChange={(e) => setSignupPassword(e.target.value)}
         required="required"
       />
 

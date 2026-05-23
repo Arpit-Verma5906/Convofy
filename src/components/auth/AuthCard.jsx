@@ -4,8 +4,17 @@ import SocialAuthButton from "./SocialAuthButton";
 import PasskeyIcon from "../../assets/passkey.svg?react"
 import GoogleIcon from "../../assets/google.svg?react"
 import TermsText from "./TermsText";
+import { useState } from "react";
 
 function AuthCard() {
+
+  const [signinEmail, setSigninEmail] = useState("")
+  const [signinPassword, setSigninPassword] = useState("")
+
+  const [signupDisplayName, setSignupDisplayName] = useState("")
+  const [signupUsername, setSignupUsername] = useState("")
+  const [signupEmail, setSignupEmail] = useState("")
+  const [signupPassword, setSignupPassword] = useState("")
 
   const location = useLocation();
   const isLogin = location.pathname === "/auth/signin";
@@ -13,7 +22,7 @@ function AuthCard() {
   return (
     <div className="auth-bg not-lg:rounded-xl not-lg:m-1 lg:w-[34%] p-6 lg:px-12">
       <div className="flex flex-col justify-between gap-8">
-        
+
         <AuthTabs />
 
         <div
@@ -21,7 +30,23 @@ function AuthCard() {
           className={`flex flex-col justify-between gap-8 ${isLogin ? "animate-fade-left" : "animate-fade-right"}`}
         >
 
-          <Outlet />
+          <Outlet
+            context={{
+              signinEmail,
+              setSigninEmail,
+              signinPassword,
+              setSigninPassword,
+
+              signupDisplayName,
+              setSignupDisplayName,
+              signupUsername,
+              setSignupUsername,
+              signupEmail,
+              setSignupEmail,
+              signupPassword,
+              setSignupPassword,
+            }}
+          />
 
           <div className="flex items-center gap-2">
             <div className="flex-1 h-[0.25px] bg-[#E5E7EB] dark:bg-white/10 line"></div>
