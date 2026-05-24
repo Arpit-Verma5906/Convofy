@@ -1,6 +1,7 @@
-import express, {type Request, type Response} from "express"
+import express, { type Request, type Response } from "express"
 import cors from "cors"
 import dotenv from "dotenv"
+import mongoose from "mongoose"
 
 import authRoutes from "./routes/auth.routes"
 
@@ -18,6 +19,14 @@ app.get('/', (req: Request, res: Response) => {
     res.send("Backend Running")
 })
 
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`)
+mongoose.connect(process.env.MONGO_URI!)
+.then(() => {
+    console.log("Database Connected Successfully")
+    
+    app.listen(PORT, () => {
+        console.log(`Server running on port ${PORT}`)
+    })
+})
+.catch((err) => {
+    console.log(err)
 })

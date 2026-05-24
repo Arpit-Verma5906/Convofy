@@ -7,7 +7,6 @@ router.get("/", (req: Request, res: Response) => {
 })
 
 router.post("/login", (req: Request, res: Response) => {
-
     res.json({
         message: "Login Successful!",
     })
