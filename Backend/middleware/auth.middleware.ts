@@ -1,7 +1,8 @@
 import { type Request, type Response, type NextFunction } from "express"
+import User from "../models/user.model"
 import jwt from "jsonwebtoken"
 
-const authMiddleware = (
+const authMiddleware = async (
     req: Request,
     res: Response,
     next: NextFunction,
@@ -28,12 +29,20 @@ const authMiddleware = (
             process.env.JWT_SECRET!
         ) as jwt.JwtPayload
 
-        (req as any).user = decoded
+        const user = await User.findById(decoded.userId)
+
+        if(!user) {
+            return res.status(404).json({
+                message: "User Not Found"
+            })
+        }
+
+        (req as any).user = user
 
         next()
     }
     catch (error) {
-        res.status(401).json({
+        return res.status(401).json({
             message: "Invalid Token"
         })
     }
