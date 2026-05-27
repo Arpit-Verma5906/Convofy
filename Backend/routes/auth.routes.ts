@@ -1,11 +1,19 @@
 import { Router, type Request, type Response } from "express";
 import User from "../models/user.model";
 import bcryptjs from "bcryptjs"
+import jwt from "jsonwebtoken"
+import authMiddleware from "../middleware/auth.middleware";
 
 const router = Router()
 
 router.get("/", (req: Request, res: Response) => {
     res.send("Auth Route Working")
+})
+
+router.get("/profile", authMiddleware, async (req: Request, res: Response) => {
+    res.json({
+        message: "Protected Profile Route Accessed"
+    })
 })
 
 router.post("/login", async (req: Request, res: Response) => {
@@ -32,8 +40,15 @@ router.post("/login", async (req: Request, res: Response) => {
             })
         }
 
+        const token = jwt.sign({
+            userId: user.id,
+        }, process.env.JWT_SECRET!, {
+            expiresIn: "7d",
+        })
+
         res.status(200).json({
             message: "Login Successful",
+            token,
             user: {
                 id: user.id,
                 displayName: user.displayName,
