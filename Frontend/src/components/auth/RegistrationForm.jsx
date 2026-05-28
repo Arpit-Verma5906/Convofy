@@ -1,5 +1,6 @@
 import Button from "../ui/Button"
 import Input from "../ui/Input"
+import api from "../../api/axios"
 import EmailIcon from "../../assets/email.svg?react"
 import LockIcon from "../../assets/lock.svg?react"
 import HumanIcon from "../../assets/human.svg?react"
@@ -18,16 +19,28 @@ function RegistrationForm() {
     signupPassword,
     setSignupPassword,
   } = useOutletContext()
-
-  function handleSubmit(e) {
+  
+  async function handleSubmit(e) {
     e.preventDefault();
 
-    console.log({ signupDisplayName, signupUsername, signupEmail, signupPassword })
+    try {
+      const response = await api.post("/auth/register", {
+        displayName: signupDisplayName,
+        username: signupUsername,
+        email: signupEmail,
+        password: signupPassword,
+      })
 
-    setSignupDisplayName("")
-    setSignupUsername("")
-    setSignupEmail("")
-    setSignupPassword("")
+      console.log(response.data)
+
+      setSignupDisplayName("")
+      setSignupUsername("")
+      setSignupEmail("")
+      setSignupPassword("")
+    }
+    catch (error) {
+      console.log(error)
+    }
   }
 
   return (
@@ -55,7 +68,7 @@ function RegistrationForm() {
         onChange={(e) => setSignupUsername(e.target.value)}
         required="required"
         autoComplete="username"
-        nname="username"
+        name="username"
       />
       <Input
         label="Email"

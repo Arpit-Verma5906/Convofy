@@ -1,5 +1,6 @@
 import Input from "../ui/Input";
 import Button from "../ui/Button";
+import api from "../../api/axios";
 import EmailIcon from "../../assets/email.svg?react"
 import LockIcon from "../../assets/lock.svg?react"
 import { useOutletContext } from "react-router-dom";
@@ -13,13 +14,34 @@ function LoginForm() {
         setSigninPassword,
     } = useOutletContext()
 
-    function handleSubmit(e) {
+    async function handleSubmit(e) {
         e.preventDefault();
 
-        console.log({ signinEmail, signinPassword })
+        try {
+            const response = await api.post("/auth/login", {
+                email: signinEmail,
+                password: signinPassword,
+            })
 
-        setSigninEmail("")
-        setSigninPassword("")
+            console.log(response.data)
+
+            localStorage.setItem("token", response.data.token)
+            const token = localStorage.getItem("token")
+
+            const profileResponse = await api.get("/auth/profile", {
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
+            })
+
+            console.log(profileResponse.data)
+
+            setSigninEmail("")
+            setSigninPassword("")
+        }
+        catch (error) {
+            console.log(error)
+        }
     }
 
     return (
