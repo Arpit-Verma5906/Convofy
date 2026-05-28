@@ -3,7 +3,7 @@ import HeroImg from "../../assets/convofy.svg?react"
 
 function HeroSection() {
   return (
-    <div className="flex flex-col justify-center items-center lg:min-h-screen min-h-120 lg:w-[66%]">
+    <div className="flex flex-col justify-center items-center app-bg lg:min-h-screen min-h-120 lg:w-[66%]">
       <div>
         <HeroImg  className="w-16 mb-8" />
       </div>

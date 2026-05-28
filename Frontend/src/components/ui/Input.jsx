@@ -13,7 +13,7 @@ function Input({ label, Icon, type = "text", placeholder, value, onChange, requi
         {label}
       </label>
 
-      <div className="flex gap-2 w-full h-12.5 px-4 text-[14px] items-center text-center not-focus-within:input-value input-bg input-border rounded-xl">
+      <div className="flex gap-2 w-full h-12.5 px-4 text-[14px] items-center text-center input-bg input-border rounded-xl">
         <Icon className="w-4 input-value" />
         <input type={inputType}
           placeholder={placeholder}
@@ -22,7 +22,7 @@ function Input({ label, Icon, type = "text", placeholder, value, onChange, requi
           required={required}
           autoComplete={autoComplete}
           name={name}
-          className="flex-1 min-w-0 pb-px outline-none bg-transparent"
+          className="flex-1 min-w-0 pb-px outline-none bg-transparent dark:text-white"
         />
         {type === "password" && (
           showPassword ? <EyeOffIcon

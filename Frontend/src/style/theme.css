@@ -10,6 +10,7 @@
     --input-value: #99A1AF;
     --input-bg: #F9FAFB;
     --input-border: #E5E7EB;
+    --input-autofill-color: black;
 }
 
 .dark {
@@ -20,6 +21,7 @@
     --input-value: #4A5565;
     --input-bg: #2a2a34;
     --input-border: #35353e;
+    --input-autofill-color: white;
 }
 
 .app-bg { background-color: var(--app-bg); }
@@ -30,3 +32,7 @@
 .input-bg { background-color: var(--input-bg); }
 .input-border { border: 1.5px solid var(--input-border); }
 .input-border:focus-within { border: 1.5px solid #7F22FE; }
+
+input:-webkit-autofill {
+  -webkit-text-fill-color: var(--input-autofill-color) !important;
+}

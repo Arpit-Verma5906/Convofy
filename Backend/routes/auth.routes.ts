@@ -105,8 +105,15 @@ router.post("/register", async (req: Request, res: Response) => {
             bio,
         })
 
+        const token = jwt.sign({
+            userId: user.id,
+        }, process.env.JWT_SECRET!, {
+            expiresIn: "7d",
+        })
+
         res.status(201).json({
             message: "Account Created Successfully",
+            token,
             user: {
                 id: user.id,
                 displayName: user.displayName,

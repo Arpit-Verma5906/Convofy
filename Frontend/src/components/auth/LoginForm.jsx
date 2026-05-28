@@ -3,7 +3,7 @@ import Button from "../ui/Button";
 import api from "../../api/axios";
 import EmailIcon from "../../assets/email.svg?react"
 import LockIcon from "../../assets/lock.svg?react"
-import { useOutletContext } from "react-router-dom";
+import { useNavigate, useOutletContext } from "react-router-dom";
 
 function LoginForm() {
 
@@ -13,6 +13,8 @@ function LoginForm() {
         signinPassword,
         setSigninPassword,
     } = useOutletContext()
+
+    const navigate = useNavigate();
 
     async function handleSubmit(e) {
         e.preventDefault();
@@ -24,20 +26,9 @@ function LoginForm() {
             })
 
             console.log(response.data)
-
             localStorage.setItem("token", response.data.token)
-            const token = localStorage.getItem("token")
-
-            const profileResponse = await api.get("/auth/profile", {
-                headers: {
-                    Authorization: `Bearer ${token}`
-                }
-            })
-
-            console.log(profileResponse.data)
-
-            setSigninEmail("")
-            setSigninPassword("")
+            
+            navigate("/chat")
         }
         catch (error) {
             console.log(error)

@@ -5,7 +5,7 @@ import EmailIcon from "../../assets/email.svg?react"
 import LockIcon from "../../assets/lock.svg?react"
 import HumanIcon from "../../assets/human.svg?react"
 import AtSignIcon from "../../assets/atSign.svg?react"
-import { useOutletContext } from "react-router-dom"
+import { useNavigate, useOutletContext } from "react-router-dom"
 
 function RegistrationForm() {
 
@@ -19,6 +19,8 @@ function RegistrationForm() {
     signupPassword,
     setSignupPassword,
   } = useOutletContext()
+
+  const navigate = useNavigate()
   
   async function handleSubmit(e) {
     e.preventDefault();
@@ -32,11 +34,9 @@ function RegistrationForm() {
       })
 
       console.log(response.data)
+      localStorage.setItem("token", response.data.token)
 
-      setSignupDisplayName("")
-      setSignupUsername("")
-      setSignupEmail("")
-      setSignupPassword("")
+      navigate("/chat")
     }
     catch (error) {
       console.log(error)
