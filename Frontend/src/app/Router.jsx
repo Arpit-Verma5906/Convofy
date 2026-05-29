@@ -4,6 +4,7 @@ import ChatPage from "../pages/ChatPage";
 import LoginForm from "../components/auth/LoginForm";
 import RegistrationForm from "../components/auth/RegistrationForm";
 import ProtectedRoute from "../components/auth/ProtectedRoute";
+import AuthCallback from "../pages/AuthCallback";
 
 export const router = createBrowserRouter([
     {
@@ -26,7 +27,10 @@ export const router = createBrowserRouter([
                 <ChatPage />
             </ProtectedRoute>
         )
-    },
+    }, {
+        path: "/auth/callback",
+        element: <AuthCallback />
+    }
 ])
 
 function AppRouter() {

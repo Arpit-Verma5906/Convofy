@@ -2,6 +2,7 @@ import { Router, type Request, type Response } from "express";
 import User from "../models/user.model";
 import bcryptjs from "bcryptjs"
 import jwt from "jsonwebtoken"
+import passport from "passport"
 import authMiddleware from "../middleware/auth.middleware";
 
 const router = Router()
@@ -16,6 +17,47 @@ router.get("/profile", authMiddleware, async (req: Request, res: Response) => {
     })
 })
 
+router.get(
+    "/google",
+    (req, res, next) => {
+        console.log("GOOGLE ROUTE HIT")
+        next()
+    },
+    passport.authenticate(
+        "google",
+        {
+            scope: ["profile", "email"],
+        }
+    )
+)
+
+router.get("/google/callback",
+    passport.authenticate(
+        "google", {
+        session: false,
+        failureRedirect: "/auth/signin",
+    }
+    ),
+
+    async (req: Request, res: Response) => {
+
+        console.log("CALLBACK HIT")
+        console.log(req.user)
+
+        const user = req.user as any
+
+        const token = jwt.sign({
+            userId: user.id,
+        }, process.env.JWT_SECRET!, {
+            expiresIn: "7d",
+        })
+
+        console.log("TOKEN CREATED")
+
+        res.redirect(`http://localhost:5173/auth/callback?token=${token}`)
+    }
+)
+
 router.post("/login", async (req: Request, res: Response) => {
 
     const {
@@ -29,6 +71,12 @@ router.post("/login", async (req: Request, res: Response) => {
         if (!user) {
             return res.status(404).json({
                 message: "Invalid Credentials"
+            })
+        }
+
+        if (!user.password) {
+            return res.status(500).json({
+                message: "Server Error"
             })
         }
 
