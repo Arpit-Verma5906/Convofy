@@ -12,14 +12,29 @@ router.get("/", (req: Request, res: Response) => {
 })
 
 router.get("/profile", authMiddleware, async (req: Request, res: Response) => {
+
+    const userId = (req as any).user.userId
+    const user = await User.findById(userId)
+
+    if(!user) {
+        return res.status(404).json({
+            message: "User Not Found",
+        })
+    }
+
     res.json({
-        message: "Protected Profile Route Accessed"
+        user: {
+            id: user.id,
+            displayName: user.displayName,
+            username: user.username,
+            email: user.email,
+            avatar: user.avatar,
+            bio: user.bio,
+        }
     })
 })
 
-router.get(
-    "/google",
-    (req, res, next) => {
+router.get("/google", (req, res, next) => {
         console.log("GOOGLE ROUTE HIT")
         next()
     },
@@ -36,8 +51,7 @@ router.get("/google/callback",
         "google", {
         session: false,
         failureRedirect: "/auth/signin",
-    }
-    ),
+    }),
 
     async (req: Request, res: Response) => {
 

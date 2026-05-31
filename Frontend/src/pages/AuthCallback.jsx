@@ -10,7 +10,6 @@ function AuthCallback() {
     useEffect(() => {
 
         if (tokenProcessed.current) return
-
         tokenProcessed.current = true
 
         const params = new URLSearchParams(
