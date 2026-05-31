@@ -1,11 +1,14 @@
 import FeatureBadges from "./FeatureBadges"
 import HeroImg from "../../assets/convofy.svg?react"
+import FloatingMessages from "./FloatingMessages"
+import ThemeToggle from "../../theme/ThemeToggle"
 
 function HeroSection() {
   return (
-    <div className="flex flex-col justify-center items-center app-bg lg:min-h-screen min-h-120 lg:w-[66%]">
+    <div className="flex flex-col select-none justify-center items-center app-bg lg:min-h-screen min-h-120 lg:w-[66%]">
+      <FloatingMessages />
       <div>
-        <HeroImg  className="w-16 mb-8" />
+        <HeroImg className="w-16 mb-8" />
       </div>
       <div className="font-bold text-5xl leading-12 mb-4 text-[#101828] dark:text-[#FFFFFF]">
         Convofy
@@ -23,9 +26,7 @@ function HeroSection() {
         <FeatureBadges
           name="⚡ Real Time"
         />
-        <FeatureBadges
-          name="🌙 Dark Mode"
-        />
+        <ThemeToggle />
         <FeatureBadges
           name="📱 Mobile Ready"
         />

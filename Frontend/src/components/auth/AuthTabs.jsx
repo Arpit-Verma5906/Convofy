@@ -7,7 +7,7 @@ function AuthTabs() {
   const isLogin = location.pathname === "/auth/signin"
 
   return (
-    <div className="relative flex w-full rounded-2xl p-1 bg-[#f3f4f6] dark:bg-[#2b2b34] ">
+    <div className="relative select-none flex w-full rounded-2xl p-1 bg-[#f3f4f6] dark:bg-[#2b2b34] ">
 
       <div className="absolute top-1 bottom-1 w-[calc(50%-4px)] rounded-xl bg-[#7F22FE] transition-all duration-200"
         style={{ transform: isLogin ? "translateX(0%)" : "translateX(100%)" }} />

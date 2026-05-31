@@ -9,7 +9,7 @@ function Input({ label, Icon, type = "text", placeholder, value, onChange, requi
 
   return (
     <div className="flex flex-col w-full px-1 gap-2">
-      <label className="input-label text-[14px] font-medium leading-5">
+      <label className="input-label select-none text-[14px] font-medium leading-5">
         {label}
       </label>
 

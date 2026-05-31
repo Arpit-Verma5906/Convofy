@@ -63,7 +63,7 @@ function LoginForm() {
                 name="password"
             />
 
-            <div className="text-[14px] font-medium leading-5 text-[#A684FF] self-end">
+            <div className="text-[14px] select-none font-medium leading-5 text-[#A684FF] self-end">
                 Forgot password?
             </div>
 

@@ -5,6 +5,8 @@
 :root {
     --app-bg: #F0EFFF;
     --app-text: #000000;
+    --bubble-text: #1E2939;
+    --bubble-bg: #FFFFFF;
     --auth-bg: #FFFFFF;
     --input-label: #4A5565;
     --input-value: #99A1AF;
@@ -16,6 +18,8 @@
 .dark {
     --app-bg: #0D0D14;
     --app-text: #FFFFFF;
+    --bubble-text: #FFFFFF;
+    --bubble-bg: #1E1E30;
     --auth-bg: #13131E;
     --input-label: #99A1AF;
     --input-value: #4A5565;
@@ -26,6 +30,7 @@
 
 .app-bg { background-color: var(--app-bg); }
 .app-text { color: var(--app-text); }
+.bubble-text {color: var(--bubble-text); background-color: var(--bubble-bg);}
 .auth-bg { background-color: var(--auth-bg); }
 .input-label { color: var(--input-label); }
 .input-value { color: var(--input-value); }
