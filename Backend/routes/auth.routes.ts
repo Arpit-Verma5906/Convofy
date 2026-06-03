@@ -13,8 +13,7 @@ router.get("/", (req: Request, res: Response) => {
 
 router.get("/profile", authMiddleware, async (req: Request, res: Response) => {
 
-    const userId = (req as any).user.userId
-    const user = await User.findById(userId)
+    const user = (req as any).user
 
     if(!user) {
         return res.status(404).json({
@@ -35,9 +34,9 @@ router.get("/profile", authMiddleware, async (req: Request, res: Response) => {
 })
 
 router.get("/google", (req, res, next) => {
-        console.log("GOOGLE ROUTE HIT")
-        next()
-    },
+    console.log("GOOGLE ROUTE HIT")
+    next()
+},
     passport.authenticate(
         "google",
         {

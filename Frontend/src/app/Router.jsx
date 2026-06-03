@@ -6,7 +6,7 @@ import RegistrationForm from "../components/auth/RegistrationForm";
 import ProtectedRoute from "../components/auth/ProtectedRoute";
 import AuthCallback from "../pages/AuthCallback";
 
-export const router = createBrowserRouter([
+const router = createBrowserRouter([
     {
         path: "/",
         element: <Navigate to="/auth/signin" replace />,

@@ -35,14 +35,11 @@ function RegistrationForm() {
         email: signupEmail,
         password: signupPassword,
       })
-
-      console.log(response.data)
       localStorage.setItem("token", response.data.token)
 
       navigate("/chat")
     }
     catch (error) {
-      console.log(error.response?.data.message)
       setErrorMessage(error.response?.data?.message || "Something Went Wrong")
     }
   }

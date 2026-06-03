@@ -27,14 +27,11 @@ function LoginForm() {
                 email: signinEmail,
                 password: signinPassword,
             })
-
-            console.log(response.data)
             localStorage.setItem("token", response.data.token)
 
             navigate("/chat")
         }
         catch (error) {
-            console.log(error.response?.data)
             setErrorMessage(error.response?.data?.message || "Something went wrong")
         }
     }
