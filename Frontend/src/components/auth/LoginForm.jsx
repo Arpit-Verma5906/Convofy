@@ -4,6 +4,7 @@ import api from "../../api/axios";
 import EmailIcon from "../../assets/email.svg?react"
 import LockIcon from "../../assets/lock.svg?react"
 import { useNavigate, useOutletContext } from "react-router-dom";
+import { useState } from "react";
 
 function LoginForm() {
 
@@ -14,12 +15,14 @@ function LoginForm() {
         setSigninPassword,
     } = useOutletContext()
 
+    const [errorMessage, setErrorMessage] = useState("")
     const navigate = useNavigate();
 
     async function handleSubmit(e) {
         e.preventDefault();
 
         try {
+            setErrorMessage("");
             const response = await api.post("/auth/login", {
                 email: signinEmail,
                 password: signinPassword,
@@ -27,11 +30,12 @@ function LoginForm() {
 
             console.log(response.data)
             localStorage.setItem("token", response.data.token)
-            
+
             navigate("/chat")
         }
         catch (error) {
-            console.log(error)
+            console.log(error.response?.data)
+            setErrorMessage(error.response?.data?.message || "Something went wrong")
         }
     }
 
@@ -62,6 +66,12 @@ function LoginForm() {
                 autoComplete="current-password"
                 name="password"
             />
+
+            {errorMessage && (
+                <div className="text-[12px] select-none font-normal leading-3.5 text-red-500 text-center">
+                    {errorMessage}
+                </div>
+            )}
 
             <div className="text-[14px] select-none font-medium leading-5 text-[#A684FF] self-end">
                 Forgot password?

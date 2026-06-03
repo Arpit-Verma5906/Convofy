@@ -6,6 +6,7 @@ import LockIcon from "../../assets/lock.svg?react"
 import HumanIcon from "../../assets/human.svg?react"
 import AtSignIcon from "../../assets/atSign.svg?react"
 import { useNavigate, useOutletContext } from "react-router-dom"
+import { useState } from "react"
 
 function RegistrationForm() {
 
@@ -20,12 +21,14 @@ function RegistrationForm() {
     setSignupPassword,
   } = useOutletContext()
 
+  const [errorMessage, setErrorMessage] = useState("")
   const navigate = useNavigate()
-  
+
   async function handleSubmit(e) {
     e.preventDefault();
 
     try {
+      setErrorMessage("")
       const response = await api.post("/auth/register", {
         displayName: signupDisplayName,
         username: signupUsername,
@@ -39,7 +42,8 @@ function RegistrationForm() {
       navigate("/chat")
     }
     catch (error) {
-      console.log(error)
+      console.log(error.response?.data.message)
+      setErrorMessage(error.response?.data?.message || "Something Went Wrong")
     }
   }
 
@@ -92,6 +96,12 @@ function RegistrationForm() {
         autoComplete="new-password"
         name="new-password"
       />
+
+      {errorMessage && (
+        <div className="text-[12px] select-none font-normal leading-3.5 text-red-500 text-center">
+          {errorMessage}
+        </div>
+      )}
 
       <Button
         label="Create Account"
