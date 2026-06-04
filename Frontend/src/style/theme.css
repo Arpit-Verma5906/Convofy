@@ -13,6 +13,11 @@
     --input-bg: #F9FAFB;
     --input-border: #E5E7EB;
     --input-autofill-color: black;
+    --empty-hero-text: #99A1AF;
+    --chat-bg: #F5F5FA;
+    --sidebar-bg: #FFFFFF;
+    --heading-text: #text-[#101828];
+    --feature-item-bg: #FFFFFF;
 }
 
 .dark {
@@ -26,6 +31,11 @@
     --input-bg: #2a2a34;
     --input-border: #35353e;
     --input-autofill-color: white;
+    --empty-hero-text: #6A7282;
+    --chat-bg: #0D0D14;
+    --sidebar-bg: #13131e;
+    --heading-text: text-[#FFFFFF];
+    --feature-item-bg: #191920;
 }
 
 .app-bg { background-color: var(--app-bg); }
@@ -37,6 +47,12 @@
 .input-bg { background-color: var(--input-bg); }
 .input-border { border: 1.5px solid var(--input-border); }
 .input-border:focus-within { border: 1.5px solid #7F22FE; }
+.empty-hero-text { color: var(--empty-hero-text) }
+.chat-bg { background-color: var(--chat-bg); }
+.sidebar-bg { background-color: var(--sidebar-bg); }
+.heading-text { color: var(--heading-text); }
+.feature-item-logo { color: var(--feature-item-logo); }
+.feature-item-bg { background-color: var(--feature-item-bg); }
 
 input:-webkit-autofill {
   -webkit-text-fill-color: var(--input-autofill-color) !important;

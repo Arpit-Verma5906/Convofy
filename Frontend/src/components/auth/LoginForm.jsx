@@ -1,5 +1,5 @@
 import Input from "../ui/Input";
-import Button from "../ui/Button";
+import Button from "../ui/AuthButton";
 import api from "../../api/axios";
 import EmailIcon from "../../assets/email.svg?react"
 import LockIcon from "../../assets/lock.svg?react"

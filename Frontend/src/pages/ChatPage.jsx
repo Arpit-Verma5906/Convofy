@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom"
 import { useEffect } from "react";
 import api from "../api/axios";
+import ChatLayout from "../layouts/ChatLayout";
 
 function ChatPage() {
 
@@ -24,7 +25,7 @@ function ChatPage() {
 
   return (
     <div className="flex flex-col gap-2">
-      <div>The chat's will appear here</div>
+      <ChatLayout />
       <button
         className="cursor-pointer"
         onClick={handleLogout}

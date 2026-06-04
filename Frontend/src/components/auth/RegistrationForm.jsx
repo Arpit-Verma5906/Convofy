@@ -1,4 +1,4 @@
-import Button from "../ui/Button"
+import Button from "../ui/AuthButton"
 import Input from "../ui/Input"
 import api from "../../api/axios"
 import EmailIcon from "../../assets/email.svg?react"

@@ -10,7 +10,7 @@ function HeroSection() {
       <div>
         <HeroImg className="w-16 mb-8" />
       </div>
-      <div className="font-bold text-5xl leading-12 mb-4 text-[#101828] dark:text-[#FFFFFF]">
+      <div className="font-bold text-5xl leading-12 mb-4 heading-text">
         Convofy
       </div>
       <div className="text-[20px] leading-7 mb-2 text-[#4A5565] dark:text-[#D1D5DC]">

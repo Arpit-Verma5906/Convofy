@@ -1,4 +1,4 @@
-function Button({label}) {
+function AuthButton({label}) {
     return (
         <button
             type="submit"
@@ -8,4 +8,4 @@ function Button({label}) {
     )
 }
 
-export default Button
+export default AuthButton
