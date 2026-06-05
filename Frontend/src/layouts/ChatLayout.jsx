@@ -1,5 +1,6 @@
 import Sidebar from "../components/chat/Sidebar"
 import EmptyState from "../components/chat/EmptyState"
+import ThemeToggle from "../theme/ThemeToggle"
 
 function ChatLayout() {
   return (
@@ -8,6 +9,7 @@ function ChatLayout() {
         <Sidebar />
         <EmptyState />
       </div>
+      <ThemeToggle />
     </>
   )
 }

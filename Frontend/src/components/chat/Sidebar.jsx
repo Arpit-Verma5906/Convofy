@@ -1,7 +1,13 @@
+import SidebarHeader from "./SidebarHeader"
+
 function Sidebar() {
     return (
-        <div className="w-1/4 sidebar-bg app-text">
-            SideBar
+        <div className="lg:w-1/4 w-full sidebar-bg app-text">
+            <div className="p-4">
+                <SidebarHeader 
+                    unreadMessage="7"
+                />
+            </div>
         </div>
     )
 }

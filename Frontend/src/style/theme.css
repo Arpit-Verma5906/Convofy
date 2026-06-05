@@ -16,8 +16,11 @@
     --empty-hero-text: #99A1AF;
     --chat-bg: #F5F5FA;
     --sidebar-bg: #FFFFFF;
-    --heading-text: #text-[#101828];
+    --heading-text: [#101828];
     --feature-item-bg: #FFFFFF;
+    --chat-action-icon: #6A7282;
+    --hover-chat-action-icon: #1e2939;
+    --hover-chat-action-icon-bg: #F5F5FA;
 }
 
 .dark {
@@ -34,8 +37,11 @@
     --empty-hero-text: #6A7282;
     --chat-bg: #0D0D14;
     --sidebar-bg: #13131e;
-    --heading-text: text-[#FFFFFF];
+    --heading-text: [#FFFFFF];
     --feature-item-bg: #191920;
+    --chat-action-icon: #99A1AF;
+    --hover-chat-action-icon: #FFFFFF;
+    --hover-chat-action-icon-bg: #2b2b35;
 }
 
 .app-bg { background-color: var(--app-bg); }
@@ -53,6 +59,8 @@
 .heading-text { color: var(--heading-text); }
 .feature-item-logo { color: var(--feature-item-logo); }
 .feature-item-bg { background-color: var(--feature-item-bg); }
+.chat-action-icon { color: var(--chat-action-icon); }
+.chat-action-icon:hover { color: var(--hover-chat-action-icon); background-color: var(--hover-chat-action-icon-bg);}
 
 input:-webkit-autofill {
   -webkit-text-fill-color: var(--input-autofill-color) !important;
