@@ -71,6 +71,7 @@
 .chat-action-icon { color: var(--chat-action-icon); }
 .chat-action-icon:hover { color: var(--hover-chat-action-icon); background-color: var(--hover-chat-action-icon-bg);}
 .filter-bg:hover { background-color: var(--filter-bg); color: var(--filter-text); }
+.active-filter { color: #8e51ff ; background-color: #A684FF;}
 
 input:-webkit-autofill {
   -webkit-text-fill-color: var(--input-autofill-color) !important;

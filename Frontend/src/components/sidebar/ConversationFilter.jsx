@@ -2,22 +2,29 @@ import FilterButton from "./FilterButton"
 import Group from "../../assets/groups.svg?react"
 import Chat from "../../assets/chat.svg?react"
 
-function ConversationFilter() {
-  return (
-    <div className="flex justify-between gap-2">
-        <FilterButton   
-            label="All"
-        />
-        <FilterButton 
-            Icon={Chat}
-            label="DMs"
-        />
-        <FilterButton 
-            Icon={Group}
-            label="Groups"
-        />
-    </div>
-  )
+function ConversationFilter({ activeFilter, setActiveFilter }) {
+    return (
+        <div className="flex justify-between gap-2">
+            <FilterButton
+                label="All"
+                isActive={activeFilter === "all"}
+                onClick={() => setActiveFilter("all")}
+            />
+            <FilterButton
+                Icon={Chat}
+                label="DMs"
+                isActive={activeFilter === "dm"}
+                onClick={() => setActiveFilter("dm")}
+            />
+            <FilterButton
+                Icon={Group}
+                label="Groups"
+                isActive={activeFilter === "group"}
+                onClick={() => setActiveFilter("group")}
+            />
+
+        </div>
+    )
 }
 
 export default ConversationFilter

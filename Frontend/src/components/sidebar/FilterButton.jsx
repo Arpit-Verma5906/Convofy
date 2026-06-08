@@ -1,6 +1,10 @@
-function FilterButton({ Icon, label }) {
+function FilterButton({ Icon, label, isActive, onClick }) {
     return (
-        <div className="flex w-full gap-1.25 rounded-[10px] filter-bg cursor-pointer text-xs leading-4 empty-hero-text justify-center items-center h-7">
+        <div 
+        className={`flex select-none w-full gap-1.25 rounded-[10px] cursor-pointer text-xs leading-4 justify-center items-center h-7
+            ${isActive ? "active-filter font-semibold" : "empty-hero-text  filter-bg"}
+        `}
+        onClick={onClick}>
             {Icon && <Icon className="w-3 h-3"/>}
             <div>
                 {label}
