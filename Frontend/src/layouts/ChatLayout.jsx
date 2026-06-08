@@ -1,4 +1,4 @@
-import Sidebar from "../components/chat/Sidebar"
+import Sidebar from "../components/sidebar/Sidebar"
 import EmptyState from "../components/chat/EmptyState"
 import ThemeToggle from "../theme/ThemeToggle"
 
