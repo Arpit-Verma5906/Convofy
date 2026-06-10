@@ -15,7 +15,6 @@ function ChatPage() {
     async function fetchProfile() {
       try {
         const response = await api.get("/auth/profile")
-        console.log(response.data)
       } catch (error) {
         console.log(error)
       }

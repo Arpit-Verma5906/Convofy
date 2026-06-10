@@ -33,10 +33,7 @@ router.get("/profile", authMiddleware, async (req: Request, res: Response) => {
     })
 })
 
-router.get("/google", (req, res, next) => {
-    console.log("GOOGLE ROUTE HIT")
-    next()
-},
+router.get("/google",
     passport.authenticate(
         "google",
         {
@@ -54,9 +51,6 @@ router.get("/google/callback",
 
     async (req: Request, res: Response) => {
 
-        console.log("CALLBACK HIT")
-        console.log(req.user)
-
         const user = req.user as any
 
         const token = jwt.sign({
@@ -64,8 +58,6 @@ router.get("/google/callback",
         }, process.env.JWT_SECRET!, {
             expiresIn: "7d",
         })
-
-        console.log("TOKEN CREATED")
 
         res.redirect(`http://localhost:5173/auth/callback?token=${token}`)
     }
