@@ -1,26 +1,8 @@
-import { useState, useEffect } from "react";
-
-import React from 'react'
+import { useTheme } from "../components/context/ThemeContext"
 
 function ThemeToggle() {
 
-    const [theme, setTheme] = useState(() => {
-        const saved = localStorage.getItem("theme");
-        if (saved) return saved === "dark";
-        return false;
-    })
-
-    useEffect(() => {
-        const root = document.documentElement;
-
-        if (theme) {
-            root.classList.add("dark");
-            localStorage.setItem("theme", "dark");
-        } else {
-            root.classList.remove("dark");
-            localStorage.setItem("theme", "light");
-        }
-    }, [theme])
+    const { theme, setTheme } = useTheme()
 
     return (
         <div className="px-5 py-2.5 select-none bg-[#ffffff] dark:bg-[#25252b] rounded-4xl border dark:border-[#3b3b40] cursor-pointer border-[#E5E7EB] text-center"
