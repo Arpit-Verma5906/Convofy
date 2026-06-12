@@ -7,6 +7,7 @@ import HumanIcon from "../../assets/human.svg?react"
 import AtSignIcon from "../../assets/atSign.svg?react"
 import { useNavigate, useOutletContext } from "react-router-dom"
 import { useState } from "react"
+import { useAuth } from "../context/AuthContext"
 
 function RegistrationForm() {
 
@@ -23,6 +24,7 @@ function RegistrationForm() {
 
   const [errorMessage, setErrorMessage] = useState("")
   const navigate = useNavigate()
+  const { setUser } = useAuth()
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -36,7 +38,7 @@ function RegistrationForm() {
         password: signupPassword,
       })
       localStorage.setItem("token", response.data.token)
-
+      setUser(response.data.user)
       navigate("/chat")
     }
     catch (error) {
