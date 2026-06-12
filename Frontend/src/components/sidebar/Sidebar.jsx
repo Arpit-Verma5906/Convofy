@@ -4,17 +4,23 @@ import SidebarHeader from "./SidebarHeader"
 import ConversationFilter from "./ConversationFilter";
 import UserProfileCard from "./UserProfileCard";
 import ConversationList from "./ConversationList";
+import { conversationList } from "../../mock/conversationList";
 
 function Sidebar() {
 
     const [activeFilter, setActiveFilter] = useState("all");
+    let unreadCount = 0; 
+
+    for (let i = 0; i < conversationList.length; i++) {
+        unreadCount += conversationList[i].unreadCount;
+    }
 
     return (
         <div className="lg:w-1/4 w-full max-h-screen sidebar-bg app-text">
             <div className="flex h-full flex-col">
                 <div className="p-4 flex flex-col gap-5">
                     <SidebarHeader
-                        unreadMessage="7"
+                        unreadMessage={unreadCount}
                     />
                     <div className="flex flex-col gap-2">
                         <SearchBar />

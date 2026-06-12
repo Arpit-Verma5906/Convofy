@@ -12,7 +12,7 @@ function SidebarHeader({ unreadMessage }) {
           <div className="text-[18px] self-center leading-6 font-bold">
             Convofy
           </div>
-          <div className={`px-2 text-[#A684FF] bg-[rgba(142,81,255,0.2)] flex items-center self-center justify-center rounded-4xl
+          <div className={`h-6 w-6 text-xs leading-4 text-[#A684FF] bg-[rgba(142,81,255,0.2)] flex items-center self-center justify-center rounded-4xl
         ${unreadMessage === "0" ? "hidden" : "block"}
         `}>
             {unreadMessage}
