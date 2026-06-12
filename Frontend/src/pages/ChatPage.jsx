@@ -2,12 +2,15 @@ import { useNavigate } from "react-router-dom"
 import { useEffect } from "react";
 import api from "../api/axios";
 import ChatLayout from "../layouts/ChatLayout";
+import { useAuth } from "../components/context/AuthContext";
 
 function ChatPage() {
 
   const navigate = useNavigate()
+  const { setUser } = useAuth()
   function handleLogout() {
     localStorage.removeItem("token");
+    setUser(null);
     navigate("/")
   }
 

@@ -5,6 +5,7 @@ import EmailIcon from "../../assets/email.svg?react"
 import LockIcon from "../../assets/lock.svg?react"
 import { useNavigate, useOutletContext } from "react-router-dom";
 import { useState } from "react";
+import { useAuth } from "../context/AuthContext"
 
 function LoginForm() {
 
@@ -17,6 +18,7 @@ function LoginForm() {
 
     const [errorMessage, setErrorMessage] = useState("")
     const navigate = useNavigate();
+    const { setUser } = useAuth()
 
     async function handleSubmit(e) {
         e.preventDefault();
@@ -28,6 +30,7 @@ function LoginForm() {
                 password: signinPassword,
             })
             localStorage.setItem("token", response.data.token)
+            setUser(response.data.user)
 
             navigate("/chat")
         }

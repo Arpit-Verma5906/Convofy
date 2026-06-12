@@ -5,6 +5,10 @@ function Avatar({ isOnline = false }) {
 
   const { user } = useAuth()
 
+  if (!user) {
+    return null
+  }
+
   if (user.avatar)
     return (
       <div className="relative">
