@@ -10,7 +10,7 @@ function Sidebar() {
     const [activeFilter, setActiveFilter] = useState("all");
 
     return (
-        <div className="lg:w-1/4 w-full sidebar-bg app-text">
+        <div className="lg:w-1/4 w-full max-h-screen sidebar-bg app-text">
             <div className="flex h-full flex-col">
                 <div className="p-4 flex flex-col gap-5">
                     <SidebarHeader
@@ -24,7 +24,7 @@ function Sidebar() {
                         />
                     </div>
                 </div>
-                <div className="flex-1">
+                <div className="flex-1 px-2 overflow-y-auto">
                     <ConversationList />
                 </div>
                 <UserProfileCard />

@@ -13,8 +13,11 @@ function UserProfileCard({ isOnline = true }) {
             </div>
             <div className="p-5 flex items-center between w-full gap-3">
                 <div>
-                    <Avatar 
+                    <Avatar
                         isOnline={isOnline}
+                        avatar={user.avatar}
+                        username={user.displayName}
+                        displayName={user.displayName}
                     />
                 </div>
                 <div className="h-9 flex flex-col flex-1 justify-center">
