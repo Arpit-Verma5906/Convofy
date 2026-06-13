@@ -1,9 +1,10 @@
 export const conversationList = [
     {
         id: 1,
+        type: "dm",
         name: "Sarah Chen",
         username: "sarah",
-        avatar: "",
+        avatar: "https://randomuser.me/api/portraits/women/12.jpg",
         isOnline: true,
         lastMessage: "Amazing! 🚀",
         unreadCount: 2,
@@ -11,6 +12,7 @@ export const conversationList = [
     },
     {
         id: 2,
+        type: "group",
         name: "Design Team",
         username: "group",
         avatar: "",
@@ -21,9 +23,10 @@ export const conversationList = [
     },
     {
         id: 3,
+        type: "dm",
         name: "Alex Morgan",
         username: "alex",
-        avatar: "",
+        avatar: "https://randomuser.me/api/portraits/men/64.jpg",
         isOnline: true,
         lastMessage: "Let's hop on a call later.",
         unreadCount: 0,
@@ -31,9 +34,10 @@ export const conversationList = [
     },
     {
         id: 4,
+        type: "dm",
         name: "Priya Sharma",
         username: "priya",
-        avatar: "",
+        avatar: "https://randomuser.me/api/portraits/women/63.jpg",
         isOnline: false,
         lastMessage: "I'll send the files tonight.",
         unreadCount: 1,
@@ -41,6 +45,7 @@ export const conversationList = [
     },
     {
         id: 5,
+        type: "group",
         name: "Frontend Crew",
         username: "group",
         avatar: "",
@@ -51,6 +56,7 @@ export const conversationList = [
     },
     {
         id: 6,
+        type: "dm",
         name: "Mike Johnson",
         username: "mike",
         avatar: "",
@@ -61,9 +67,10 @@ export const conversationList = [
     },
     {
         id: 7,
+        type: "dm",
         name: "Emma Wilson",
         username: "emma",
-        avatar: "",
+        avatar: "https://randomuser.me/api/portraits/women/11.jpg",
         isOnline: false,
         lastMessage: "See you tomorrow 👋",
         unreadCount: 0,
@@ -71,6 +78,7 @@ export const conversationList = [
     },
     {
         id: 8,
+        type: "group",
         name: "Hackathon Team",
         username: "group",
         avatar: "",
@@ -81,9 +89,10 @@ export const conversationList = [
     },
     {
         id: 9,
+        type: "dm",
         name: "David Kim",
         username: "david",
-        avatar: "",
+        avatar: "https://randomuser.me/api/portraits/men/15.jpg",
         isOnline: true,
         lastMessage: "Can you review my PR?",
         unreadCount: 1,
@@ -91,9 +100,10 @@ export const conversationList = [
     },
     {
         id: 10,
+        type: "dm",
         name: "Luna Martinez",
         username: "luna",
-        avatar: "",
+        avatar: "https://randomuser.me/api/portraits/women/82.jpg",
         isOnline: false,
         lastMessage: "That sounds like a great idea.",
         unreadCount: 0,

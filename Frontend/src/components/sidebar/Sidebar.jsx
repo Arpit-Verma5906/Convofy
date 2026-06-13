@@ -8,6 +8,7 @@ import { conversationList } from "../../mock/conversationList";
 
 function Sidebar() {
 
+    const [ selectedId, setSelectedId ] = useState(null)
     const [activeFilter, setActiveFilter] = useState("all");
     let unreadCount = 0; 
 
@@ -30,8 +31,12 @@ function Sidebar() {
                         />
                     </div>
                 </div>
-                <div className="flex-1 px-2 overflow-y-auto">
-                    <ConversationList />
+                <div className="flex-1 pt-1 overflow-y-auto">
+                    <ConversationList 
+                    conversationList={conversationList}
+                    selectedId={selectedId}
+                    setSelectedId={setSelectedId}
+                    />
                 </div>
                 <UserProfileCard />
             </div>

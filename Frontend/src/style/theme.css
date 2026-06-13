@@ -24,6 +24,8 @@
     --search-bg: #F3F4F6;
     --filter-bg: #f3f4f6;
     --filter-text: #4a5565;
+    --conversation-card-hover: #eaf0f4;
+    --conversation-card-selected: #F5F3FF;
 }
 
 .dark {
@@ -48,6 +50,8 @@
     --search-bg: #24242e;
     --filter-bg: #1f1f29;
     --filter-text: #d1d5dc;
+    --conversation-card-hover: #1f1f29;
+    --conversation-card-selected: rgba(142, 81, 255, 0.15);
 }
 
 .app-bg { background-color: var(--app-bg); }
@@ -72,6 +76,8 @@
 .chat-action-icon:hover { color: var(--hover-chat-action-icon); background-color: var(--hover-chat-action-icon-bg);}
 .filter-bg:hover { background-color: var(--filter-bg); color: var(--filter-text); }
 .active-filter { color: #8e51ff ; background-color: #A684FF;}
+.conversation-card:hover { background-color: var(--conversation-card-hover); }
+.selected-conversation-card { background-color: var(--conversation-card-selected); }
 
 input:-webkit-autofill {
   -webkit-text-fill-color: var(--input-autofill-color) !important;
