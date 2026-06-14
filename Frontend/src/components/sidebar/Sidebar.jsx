@@ -4,10 +4,11 @@ import SidebarHeader from "./SidebarHeader"
 import ConversationFilter from "./ConversationFilter";
 import UserProfileCard from "./UserProfileCard";
 import ConversationList from "./ConversationList";
-import { conversationList } from "../../mock/conversationList";
+import { conversationList as initialConversationList } from "../../mock/conversationList";
 
 function Sidebar() {
 
+    const [conversationList, setConversationList] = useState(initialConversationList) 
     const [ selectedId, setSelectedId ] = useState(null)
     const [activeFilter, setActiveFilter] = useState("all");
     let unreadCount = 0; 
@@ -34,8 +35,10 @@ function Sidebar() {
                 <div className="flex-1 pt-1 overflow-y-auto">
                     <ConversationList 
                     conversationList={conversationList}
+                    setConversationList={setConversationList}
                     selectedId={selectedId}
                     setSelectedId={setSelectedId}
+                    activeFilter={activeFilter}
                     />
                 </div>
                 <UserProfileCard />
