@@ -1,6 +1,6 @@
 import Avatar from "../ui/Avatar"
 
-function ConversationCard({ key, conversation, isSelected, onClick }) {
+function ConversationCard({ conversation, isSelected, onClick }) {
   return (
     <div
       onClick={onClick}
@@ -15,28 +15,30 @@ function ConversationCard({ key, conversation, isSelected, onClick }) {
         username={conversation.username}
         displayName={conversation.name}
       />
-      <div className="w-full flex flex-col justify-center gap-0.75">
-        <div className="flex justify-between">
-          <div className={`text-[14px] font-semibold leading-5
-            ${isSelected ? "text-[#A684FF]" : "heading-text"}`}>
+      <div className="flex-1 min-w-0 flex flex-col justify-center gap-1">
+        <div className="flex items-center gap-2">
+          <div
+            className={`flex-1 min-w-0 truncate text-[14px] font-semibold leading-5
+            ${isSelected ? "text-[#A684FF]" : "heading-text"}`}
+          >
             {conversation.name}
           </div>
-          <div className="text-xs font-medium leading-4 input-value">
+          <div className="shrink-0 text-xs font-medium leading-4 input-value">
             {conversation.updatedAt}
           </div>
         </div>
-        <div className="flex justify-between">
-          <div className="text-xs font-medium leading-4 h-4 text-[#6A7282] overflow-x-scroll">
+        <div className="flex items-center gap-2">
+          <div className="flex-1 min-w-0 truncate text-xs font-medium leading-4 text-[#6A7282]">
             {conversation.lastMessage}
           </div>
-          <div className={`h-5 flex items-center justify-center text-white rounded-full w-5 text-xs font-bold leading-4 bg-[#8E51FF]
-              ${conversation.unreadCount !== 0 ? "block" : "hidden"}
-            `}>
-            {conversation.unreadCount}
-          </div>
+          {conversation.unreadCount > 0 && (
+            <div className=" h-5 min-w-5 px-1 flex items-center justify-center text-white rounded-full text-[10px] font-bold leading-4 bg-[#8E51FF]">
+              {conversation.unreadCount}
+            </div>
+          )}
         </div>
       </div>
-    </div >
+    </div>
   )
 }
 
