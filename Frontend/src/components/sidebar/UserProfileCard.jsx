@@ -16,8 +16,7 @@ function UserProfileCard({ isOnline = true }) {
                     <Avatar
                         isOnline={isOnline}
                         avatar={user.avatar}
-                        username={user.displayName}
-                        displayName={user.displayName}
+                        username={user.username}
                     />
                 </div>
                 <div className="h-9 flex flex-col flex-1 justify-center">

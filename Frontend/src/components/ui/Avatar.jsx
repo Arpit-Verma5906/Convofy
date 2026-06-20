@@ -1,6 +1,6 @@
 import { getAvatarColours } from "../utils/avatarUtils"
 
-function Avatar({ isOnline = false, avatar, username, displayName }) {
+function Avatar({ isOnline = false, avatar, username }) {
     return (
         <div className="relative">
             {avatar
@@ -12,7 +12,7 @@ function Avatar({ isOnline = false, avatar, username, displayName }) {
                         backgroundColor: getAvatarColours(username)
                     }}
                 >
-                    {displayName?.[0]?.toUpperCase() || "?"}
+                    {username?.[0]?.toUpperCase() || "?"}
                 </div>
             }
             <div className={`absolute bottom-0.75 right-0.75 ring-2 w-1.25 h-1.25 rounded-full
