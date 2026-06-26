@@ -13,6 +13,7 @@ function ConversationCard({ conversation, isSelected, onClick }) {
         isOnline={conversation.isOnline}
         avatar={conversation.avatar}
         username={conversation.username}
+        type={conversation.type}
       />
       <div className="flex-1 min-w-0 flex flex-col justify-center gap-1">
         <div className="flex items-center gap-2">

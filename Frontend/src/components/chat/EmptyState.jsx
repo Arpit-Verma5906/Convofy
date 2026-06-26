@@ -10,7 +10,7 @@ function EmptyState() {
     return (
         <div className="w-3/4 hidden lg:block chat-bg app-text">
             <div className="flex justify-center items-center w-full h-full">
-                <div className="flex flex-col max-w-[384px] items-center gap-7">
+                <div className="flex select-none flex-col max-w-[384px] items-center gap-7">
                     <Logo className="w-20 h-20" />
                     <div className="flex flex-col items-center gap-1">
                         <div className="heading-text text-2xl font-bold leading-8">

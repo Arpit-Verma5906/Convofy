@@ -30,7 +30,7 @@ function Sidebar({ initialConversationList, selectedId, setSelectedId }) {
                         />
                     </div>
                 </div>
-                <div className="flex-1 py-1.5 overflow-y-auto">
+                <div className="flex-1 select-none py-1.5 overflow-y-auto">
                     <ConversationList 
                     conversationList={conversationList}
                     setConversationList={setConversationList}
