@@ -5,7 +5,7 @@ import InfoIcon from "../../assets/info.svg?react"
 
 function ChatAreaHeader({ isOnline, avatar, username, displayName, lastSeen }) {
     return (
-        <div className="px-4 py-3 flex gap-3 h-16 bg-[#13131E]/80">
+        <div className="px-4 py-3 flex gap-3 h-16 bg-white dark:bg-[#13131E]/80">
             <div>
                 <div className="w-min h-min">
                     <Avatar

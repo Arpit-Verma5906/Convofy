@@ -9,7 +9,7 @@ function UserProfileCard({ isOnline = true }) {
     return (
         <div className="select-none">
             <div className="flex items-center">
-                <div className="flex-1 line bg-[#E5E7EB] dark:bg-white/10 h-0.5"></div>
+                <div className="flex-1 line bg-[#E5E7EB] dark:bg-white/10 h-px"></div>
             </div>
             <div className="p-5 flex items-center between w-full gap-3">
                 <div>
