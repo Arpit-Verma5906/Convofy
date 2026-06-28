@@ -1,6 +1,6 @@
 import SearchIcon from "../../assets/search.svg?react"
 
-function SearchBar({ activeFilter, setActiveFilter }) {
+function SearchBar() {
     return (
         <div className="flex w-full px-4 h-10 gap-2 text-[14px] items-center search-bg chat-border rounded-[14px]">
             <div className="flex w-full items-center justify-center gap-2">
