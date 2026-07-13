@@ -8,7 +8,7 @@ function HeroSection() {
     <div className="flex flex-col select-none justify-center items-center app-bg lg:min-h-screen min-h-120 lg:w-[66%]">
       <FloatingMessages />
       <div>
-        <HeroImg className="w-16 mb-4" />
+        <HeroImg className="w-16 mb-6 lg:mb-4" />
       </div>
       <div className="font-bold text-5xl leading-12 mb-4 heading-text">
         Convofy

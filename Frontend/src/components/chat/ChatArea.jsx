@@ -1,5 +1,6 @@
 import ChatAreaFooter from "./ChatAreaFooter"
 import ChatAreaHeader from "./ChatAreaHeader"
+import MessageList from "./MessageList"
 
 function ChatArea({ selectedConversation }) {
 
@@ -15,13 +16,10 @@ function ChatArea({ selectedConversation }) {
             <div className="flex items-center">
                 <div className="flex-1 line bg-[#E5E7EB] dark:bg-white/10 h-px"></div>
             </div>
-            <div className="flex-1 flex flex-col overflow-y-auto">
-                <div>
-                    {selectedConversation?.name}
-                </div>
-                <div>
-                    {selectedConversation?.lastMessage}
-                </div>
+            <div className="flex-1 flex flex-col p-4 overflow-y-auto">
+                <MessageList 
+                    selectedConversation={selectedConversation}
+                />
             </div>
             <div className="flex items-center">
                 <div className="flex-1 line bg-[#E5E7EB] dark:bg-white/10 h-px"></div>
