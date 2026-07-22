@@ -3,7 +3,6 @@ import cors from "cors"
 import dotenv from "dotenv"
 import mongoose from "mongoose"
 import passport from "./config/passport"
-
 import authRoutes from "./routes/auth.routes"
 
 dotenv.config();

@@ -11,11 +11,9 @@ passport.use(
         async (accesToken, refreshToken, profile, done) => {
 
             const email = profile.emails?.[0]?.value
-
             let user = await User.findOne({ email })
 
             if (!user) {
-
                 user = await User.create({
                     displayName: profile.displayName,
                     username: profile.emails?.[0]?.value.split("@")[0],
