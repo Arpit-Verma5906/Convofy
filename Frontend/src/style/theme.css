@@ -5,6 +5,7 @@
 :root {
     --app-bg: #F0EFFF;
     --app-text: #000000;
+    --accent-secondary: #e66074;
     --bubble-text: #1E2939;
     --bubble-bg: #FFFFFF;
     --auth-bg: #FFFFFF;
@@ -14,7 +15,7 @@
     --input-border: #E5E7EB;
     --input-autofill-color: black;
     --empty-hero-text: #99A1AF;
-    --chat-bg: #F5F5FA;
+    --chat-bg: #ceceda;
     --sidebar-bg: #FFFFFF;
     --heading-text: #101828;
     --feature-item-bg: #FFFFFF;
@@ -24,6 +25,7 @@
     --search-bg: #F3F4F6;
     --filter-bg: #f3f4f6;
     --filter-text: #4a5565;
+    --active-filter: rgba(245, 139, 153, 0.6);
     --conversation-card-hover: #eaf0f4;
     --conversation-card-selected: #F5F3FF;
 }
@@ -31,6 +33,7 @@
 .dark {
     --app-bg: #0D0D14;
     --app-text: #FFFFFF;
+    --accent-secondary: #ff899a;
     --bubble-text: #FFFFFF;
     --bubble-bg: #1E1E30;
     --auth-bg: #13131E;
@@ -47,15 +50,17 @@
     --chat-action-icon: #99A1AF;
     --hover-chat-action-icon: #FFFFFF;
     --hover-chat-action-icon-bg: #2b2b35;
-    --search-bg: #24242e;
+    --search-bg: #1e1e26;
     --filter-bg: #1f1f29;
     --filter-text: #d1d5dc;
+    --active-filter: #d38f99;
     --conversation-card-hover: #1f1f29;
-    --conversation-card-selected: rgba(142, 81, 255, 0.15);
+    --conversation-card-selected: rgba(142, 81, 255, 0.07);
 }
 
 .app-bg { background-color: var(--app-bg); }
 .app-text { color: var(--app-text); }
+.accent-secondary { background-color: var(--accent-secondary); color: #FFFFFF; }
 .bubble-text {color: var(--bubble-text); background-color: var(--bubble-bg);}
 .auth-bg { background-color: var(--auth-bg); }
 .input-label { color: var(--input-label); }
@@ -75,7 +80,7 @@
 .chat-action-icon { color: var(--chat-action-icon); }
 .chat-action-icon:hover { color: var(--hover-chat-action-icon); background-color: var(--hover-chat-action-icon-bg);}
 .filter-bg:hover { background-color: var(--filter-bg); color: var(--filter-text); }
-.active-filter { color: #8e51ff ; background-color: #A684FF;}
+.active-filter { color: white ; background-color: var(--active-filter);}
 .conversation-card:hover { background-color: var(--conversation-card-hover); }
 .selected-conversation-card { background-color: var(--conversation-card-selected); }
 

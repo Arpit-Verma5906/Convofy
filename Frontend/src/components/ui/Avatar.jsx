@@ -16,7 +16,7 @@ function Avatar({ isOnline = false, avatar, username = "", type = "dm"}) {
                 </div>
             }
             {type !== "group" && <div className={`absolute bottom-0.75 right-0.75 ring-2 w-1.25 h-1.25 rounded-full
-            ${isOnline ? "bg-[#00d492] ring-[#009c6b]" : "bg-[#6a7282] ring-[#4f5662]"}
+            ${isOnline ? "bg-[#6ebfa5] ring-[#639f8c]" : "bg-[#6a7282] ring-[#4f5662]"}
             `} />}
         </div>
     )

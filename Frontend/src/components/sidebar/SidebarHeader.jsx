@@ -8,11 +8,11 @@ function SidebarHeader({ unreadMessage }) {
     <div className="flex justify-between">
       <div className="flex gap-2 select-none">
         <Logo className="w-8 h-8" />
-        <div className="flex gap-2">
+        <div className="flex gap-2.75">
           <div className="text-[18px] self-center leading-6 font-bold">
             Convofy
           </div>
-          <div className={`h-6 w-6 text-xs leading-4 text-[#A684FF] bg-[rgba(142,81,255,0.2)] flex items-center self-center justify-center rounded-4xl
+          <div className={`h-5 w-5 text-[10px] font-semibold leading-4 accent-secondary flex items-center self-center justify-center rounded-4xl
         ${unreadMessage === "0" ? "hidden" : "block"}
         `}>
             {unreadMessage}

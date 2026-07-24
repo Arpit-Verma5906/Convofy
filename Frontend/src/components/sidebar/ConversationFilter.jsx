@@ -4,7 +4,7 @@ import Chat from "../../assets/chat.svg?react"
 
 function ConversationFilter({ activeFilter, setActiveFilter }) {
     return (
-        <div className="flex justify-between gap-2">
+        <div className="flex justify-between gap-3 mx-1">
             <FilterButton
                 label="All"
                 isActive={activeFilter === "all"}
@@ -22,7 +22,6 @@ function ConversationFilter({ activeFilter, setActiveFilter }) {
                 isActive={activeFilter === "group"}
                 onClick={() => setActiveFilter("group")}
             />
-
         </div>
     )
 }

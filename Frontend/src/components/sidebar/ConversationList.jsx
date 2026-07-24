@@ -8,7 +8,7 @@ function ConversationList({ conversationList, setConversationList, selectedId, s
     })
 
     return (
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2.5">
             {filteredConversations.map((conversation) => (
                 <ConversationCard
                     key={conversation.id}
