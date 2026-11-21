@@ -1,0 +1,142 @@
+{
+    "repository":  "https://github.com/mattpocock/skills",
+    "commit":  "abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "scope":  "project",
+    "skills":  [
+                   {
+                       "name":  "ask-matt",
+                       "sourcePath":  "skills/engineering/ask-matt",
+                       "installedPath":  ".agents/skills/ask-matt"
+                   },
+                   {
+                       "name":  "code-review",
+                       "sourcePath":  "skills/engineering/code-review",
+                       "installedPath":  ".agents/skills/code-review"
+                   },
+                   {
+                       "name":  "codebase-design",
+                       "sourcePath":  "skills/engineering/codebase-design",
+                       "installedPath":  ".agents/skills/codebase-design"
+                   },
+                   {
+                       "name":  "diagnosing-bugs",
+                       "sourcePath":  "skills/engineering/diagnosing-bugs",
+                       "installedPath":  ".agents/skills/diagnosing-bugs"
+                   },
+                   {
+                       "name":  "domain-modeling",
+                       "sourcePath":  "skills/engineering/domain-modeling",
+                       "installedPath":  ".agents/skills/domain-modeling"
+                   },
+                   {
+                       "name":  "grill-with-docs",
+                       "sourcePath":  "skills/engineering/grill-with-docs",
+                       "installedPath":  ".agents/skills/grill-with-docs"
+                   },
+                   {
+                       "name":  "implement-spec",
+                       "sourcePath":  "skills/engineering/implement-spec",
+                       "installedPath":  ".agents/skills/implement-spec"
+                   },
+                   {
+                       "name":  "implement",
+                       "sourcePath":  "skills/engineering/implement",
+                       "installedPath":  ".agents/skills/implement"
+                   },
+                   {
+                       "name":  "improve-codebase-architecture",
+                       "sourcePath":  "skills/engineering/improve-codebase-architecture",
+                       "installedPath":  ".agents/skills/improve-codebase-architecture"
+                   },
+                   {
+                       "name":  "pr",
+                       "sourcePath":  "skills/engineering/pr",
+                       "installedPath":  ".agents/skills/pr"
+                   },
+                   {
+                       "name":  "prototype",
+                       "sourcePath":  "skills/engineering/prototype",
+                       "installedPath":  ".agents/skills/prototype"
+                   },
+                   {
+                       "name":  "research",
+                       "sourcePath":  "skills/engineering/research",
+                       "installedPath":  ".agents/skills/research"
+                   },
+                   {
+                       "name":  "retro",
+                       "sourcePath":  "skills/engineering/retro",
+                       "installedPath":  ".agents/skills/retro"
+                   },
+                   {
+                       "name":  "setup-matt-pocock-skills",
+                       "sourcePath":  "skills/engineering/setup-matt-pocock-skills",
+                       "installedPath":  ".agents/skills/setup-matt-pocock-skills"
+                   },
+                   {
+                       "name":  "tdd",
+                       "sourcePath":  "skills/engineering/tdd",
+                       "installedPath":  ".agents/skills/tdd"
+                   },
+                   {
+                       "name":  "to-spec",
+                       "sourcePath":  "skills/engineering/to-spec",
+                       "installedPath":  ".agents/skills/to-spec"
+                   },
+                   {
+                       "name":  "to-tickets",
+                       "sourcePath":  "skills/engineering/to-tickets",
+                       "installedPath":  ".agents/skills/to-tickets"
+                   },
+                   {
+                       "name":  "triage",
+                       "sourcePath":  "skills/engineering/triage",
+                       "installedPath":  ".agents/skills/triage"
+                   },
+                   {
+                       "name":  "wayfinder",
+                       "sourcePath":  "skills/engineering/wayfinder",
+                       "installedPath":  ".agents/skills/wayfinder"
+                   },
+                   {
+                       "name":  "wizard",
+                       "sourcePath":  "skills/engineering/wizard",
+                       "installedPath":  ".agents/skills/wizard"
+                   },
+                   {
+                       "name":  "grill-me",
+                       "sourcePath":  "skills/productivity/grill-me",
+                       "installedPath":  ".agents/skills/grill-me"
+                   },
+                   {
+                       "name":  "grilling",
+                       "sourcePath":  "skills/productivity/grilling",
+                       "installedPath":  ".agents/skills/grilling"
+                   },
+                   {
+                       "name":  "handoff",
+                       "sourcePath":  "skills/productivity/handoff",
+                       "installedPath":  ".agents/skills/handoff"
+                   },
+                   {
+                       "name":  "teach",
+                       "sourcePath":  "skills/productivity/teach",
+                       "installedPath":  ".agents/skills/teach"
+                   },
+                   {
+                       "name":  "to-questionnaire",
+                       "sourcePath":  "skills/productivity/to-questionnaire",
+                       "installedPath":  ".agents/skills/to-questionnaire"
+                   },
+                   {
+                       "name":  "wait-what",
+                       "sourcePath":  "skills/productivity/wait-what",
+                       "installedPath":  ".agents/skills/wait-what"
+                   },
+                   {
+                       "name":  "writing-for-agents",
+                       "sourcePath":  "skills/productivity/writing-for-agents",
+                       "installedPath":  ".agents/skills/writing-for-agents"
+                   }
+               ]
+}

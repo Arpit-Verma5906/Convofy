@@ -72,5 +72,13 @@ The client app should now be running at `http://localhost:5173`.
 - [ ] Group Chats & Direct Messages
 - [ ] User profiles and online status indicators
 
+## Working with coding agents
+
+Project rules are in [AGENTS.md](AGENTS.md), with scoped rules in
+[Frontend/AGENTS.md](Frontend/AGENTS.md) and [Backend/AGENTS.md](Backend/AGENTS.md).
+Matt Pocock's engineering and productivity skills are installed locally in
+`.agents/skills/`; see [the skills guide](docs/agents/skills.md) for usage,
+provenance, updates, and the local ticket/domain documentation conventions.
+
 ## License
 MIT
